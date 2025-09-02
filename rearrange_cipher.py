@@ -13,7 +13,6 @@ Usage:
 
 import sys
 import argparse
-from math import ceil
 
 def encrypt(s: str) -> str:
     # Even-indexed characters (0,2,4,...) then odd-indexed characters (1,3,5,...)
@@ -35,7 +34,6 @@ def decrypt(encrypted: str) -> str:
     # fill odd indices
     oi = 0
     for i in range(1, n, 2):
-        # odd_part may be shorter when n is odd, but loops align
         result_chars[i] = odd_part[oi]
         oi += 1
     return ''.join(result_chars)
